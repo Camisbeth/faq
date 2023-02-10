@@ -1,0 +1,233 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  height: fit-content;
+  width: 100%;
+  padding: 5% 0%;
+  background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+}
+
+.main {
+  position: relative;
+
+  .figureAt {
+    position: absolute;
+    left: 6%;
+    z-index: 2;
+    top: 40%;
+  }
+
+  .section {
+    display: flex;
+    overflow: hidden;
+    width: 70%;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 8px;
+    position: relative;
+    height: 90%;
+    padding-top: 5%;
+
+    .figureMobile {
+      display: none;
+    }
+
+    .figure {
+      width: 50%;
+      position: relative;
+      height: 100%;
+      left: -8%;
+
+      .img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: relative;
+        bottom: 50px;
+      }
+
+      .shadowImg {
+        width: 100%;
+        object-fit: cover;
+        z-index: 0;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+      }
+    }
+
+    .sectionText {
+      width: 50%;
+      height: 100%;
+      padding-right: 5%;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 5%;
+
+      .title {
+        font-size: 1.215rem;
+        font-family: var(--font-family);
+        color: var(--text-title);
+        margin-top: 5%;
+        margin-bottom: 5%;
+        width: 700;
+      }
+
+      .sectionBorder {
+        border-bottom: 1px solid var(--dividers);
+        width: 400;
+        color: var(--text-question-answer);
+        padding: 8px 0;
+
+        .sectionQuestion {
+          display: flex;
+          justify-content: space-between;
+
+          .question {
+            display: flex;
+            font-family: var(--font-family);
+            font-size: 0.75rem;
+
+            cursor: pointer;
+
+            &:hover {
+              color: var(--text-pointer);
+            }
+          }
+
+          .imgArrowQuestion {
+            width: 14px;
+            cursor: pointer;
+          }
+
+          .imgArrowQuestionReversed {
+            @extend .imgArrowQuestion;
+            rotate: 180deg;
+          }
+
+          .boldQuestion {
+            @extend .question;
+            color: var(--bold-text);
+            font-weight: 700;
+          }
+        }
+
+        .answer {
+          font-family: var(--font-family);
+          font-size: 0.75rem;
+          margin-top: 5%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .main {
+    .figureAt {
+      top: 37%;
+      left: 3%;
+    }
+
+    .section {
+      .figure {
+        .img {
+          bottom: 30%;
+        }
+        .shadowImg {
+          bottom: -5%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .main {
+    .figureAt {
+      left: 0;
+      top: 22%;
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  html {
+    height: fit-content;
+  }
+  body {
+    padding-top: 40%;
+  }
+  .main {
+    margin-bottom: 5%;
+    .figureAt {
+      display: none;
+    }
+    .section {
+      flex-direction: column;
+      width: 90%;
+      height: 70%;
+      overflow: visible;
+      padding: 25% 5% 5% 5%;
+
+      .figureMobile {
+        display: block;
+        height: 100%;
+        width: 80%;
+        position: absolute;
+        top: -25%;
+        left: calc(50% - 256px / 2);
+
+        .imgMobile {
+          width: 256px;
+        }
+        .shadowImgMobile {
+          position: relative;
+          bottom: 20%;
+          width: 256px;
+        }
+      }
+
+      .figure {
+        display: none;
+      }
+
+      .sectionText {
+        width: 100%;
+        z-index: 2;
+
+        .title {
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  body {
+    padding-top: 50%;
+  }
+  .main {
+    .figureAt {
+    }
+    .section {
+      .figureMobile {
+        top: -40%;
+      }
+    }
+  }
+}
