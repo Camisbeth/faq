@@ -135,7 +135,7 @@ body {
   }
 }
 
-@media only screen and (max-width: 1024px) {
+@media screen and (max-width: 1024px) {
   .main {
     .figureAt {
       top: 37%;
@@ -155,7 +155,7 @@ body {
   }
 }
 
-@media only screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .main {
     .figureAt {
       left: 0;
@@ -164,7 +164,7 @@ body {
   }
 }
 
-@media only screen and (max-width: 425px) {
+@media screen and (max-width: 425px) {
   html {
     height: fit-content;
   }
@@ -217,13 +217,11 @@ body {
   }
 }
 
-@media only screen and (max-width: 320px) {
+@media screen and (max-width: 320px) {
   body {
     padding-top: 50%;
   }
   .main {
-    .figureAt {
-    }
     .section {
       .figureMobile {
         top: -40%;
