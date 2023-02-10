@@ -164,10 +164,7 @@ body {
   }
 }
 
-@media screen and (max-width: 425px) {
-  html {
-    height: fit-content;
-  }
+@media screen and (max-width: 600px) {
   body {
     padding-top: 40%;
   }
